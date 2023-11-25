@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "slovomeska",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "slovomeska::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-slovomeska-Debug-61e0c270ef4478857dbf.json",
+					"name" : "slovomeska",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/\u0415\u043b\u0435\u043d\u0430 \u0415\u043b\u0438\u0441\u0435\u0435\u0432\u0430/CLionProjects/slovomeska/cmake-build-debug",
+		"source" : "C:/Users/\u0415\u043b\u0435\u043d\u0430 \u0415\u043b\u0438\u0441\u0435\u0435\u0432\u0430/CLionProjects/slovomeska"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
