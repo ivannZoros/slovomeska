@@ -1,3 +1,3 @@
-C:/Users/Елена Елисеева/CLionProjects/slovomeska/cmake-build-debug/CMakeFiles/slovomeska.dir
-C:/Users/Елена Елисеева/CLionProjects/slovomeska/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Елена Елисеева/CLionProjects/slovomeska/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Ivan/CLionProjects/slovomeska/cmake-build-debug/CMakeFiles/slovomeska.dir
+C:/Users/Ivan/CLionProjects/slovomeska/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ivan/CLionProjects/slovomeska/cmake-build-debug/CMakeFiles/rebuild_cache.dir
