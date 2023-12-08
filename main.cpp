@@ -11,8 +11,8 @@ string shufle(const string& words) {
     return shuffle_word;
 }
 
-bool check_answer(const string& shuffle_word, const string& ans) {
-    if (shuffle_word == ans){
+bool check_answer(const string& correct_word, const string& ans) {
+    if (correct_word == ans){
         return true;
     }
     return false;
@@ -28,35 +28,31 @@ int main() {
         string shuffle_word = shufle(correct_word);
         cout << "Your lives - " << lives << endl;
         cout << "You can use - " << help << "  help" << endl;
-        cout << shuffle_word << " - shuffled"<< endl;
-        cout << "The words is - " << correct_word << endl;
+        cout << correct_word << " - ans" << endl;
+        cout << "The words is - " << shuffle_word << endl;
         string ans;
         cin >> ans;
         if (ans == "help" && help > 0) {
-            cout << "Help -  " << shuffle_word.substr(0, shuffle_word.length() / 2) << endl;
+            cout << "Help -  " << correct_word.substr(0, correct_word.length() / 2) << endl;
             help--;
             //--i;
-        }
-        else if (check_answer(shuffle_word, ans)) {
-            cout << "Next!" << endl;
-            i++;
-            if (i == numwords - 1) {
-                cout << "WIN" << endl;
-                shuffle(words.begin(), words.end(), std::mt19937(std::random_device()()));
-            }
-        } else if (ans == "help" && help == 0) {
-            cout << "All helps have been used" << endl;
-        }
-        else {
-            cout << "Wrong" << endl;
-            lives--;
-
-            if (lives == 0) {
-                cout << "GAME OVER" << endl;
-                return 0;
+            } else if (check_answer(correct_word, ans)) {
+                cout << "Next!" << endl;
+                i++;
+                if (i == (numwords - 1)) {
+                    cout << "WIN" << endl;
+                    shuffle(words.begin(), words.end(), std::mt19937(std::random_device()()));
+                }
+            } else if (ans == "help" && help == 0) {
+                cout << "All helps have been used" << endl;
+            } else {
+                cout << "Wrong" << endl;
+                lives--;
+                if (lives == 0) {
+                    cout << "GAME OVER" << endl;
+                    return 0;
+                }
             }
         }
     }
 
-
-}
