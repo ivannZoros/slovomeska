@@ -23,35 +23,43 @@ int main() {
     int help = 3;
     vector<string> words = {"apple", "banana", "viseliza", "dogs", "rogalik"};
     int numwords = words.size();
+
     for (int i = 0; i < numwords;) {
         string correct_word = words[i];
         string shuffle_word = shufle(correct_word);
+        int flag;
         cout << "Your lives - " << lives << endl;
         cout << "You can use - " << help << "  help" << endl;
         cout << correct_word << " - ans" << endl;
         cout << "The words is - " << shuffle_word << endl;
         string ans;
         cin >> ans;
-        if (ans == "help" && help > 0) {
+        if (ans == "help" && flag == 1){
+            cout << "1 help for 1 word" << endl;
+            }
+        else if (ans == "help" && help > 0) {
             cout << "Help -  " << correct_word.substr(0, correct_word.length() / 2) << endl;
             help--;
-            //--i;
+            flag = 1;
             } else if (check_answer(correct_word, ans)) {
                 cout << "Next!" << endl;
                 i++;
-                if (i == (numwords - 1)) {
+                flag = 0;
+                if (i == numwords - 1) {
                     cout << "WIN" << endl;
-                    shuffle(words.begin(), words.end(), std::mt19937(std::random_device()()));
+
                 }
             } else if (ans == "help" && help == 0) {
                 cout << "All helps have been used" << endl;
-            } else {
-                cout << "Wrong" << endl;
-                lives--;
-                if (lives == 0) {
-                    cout << "GAME OVER" << endl;
-                    return 0;
-                }
+            }
+        else {
+            cout << "Wrong" << endl;
+            lives--;
+            if (lives == 0) {
+                cout << "GAME OVER" << endl;
+                return 0;
+            }
+
             }
         }
     }
