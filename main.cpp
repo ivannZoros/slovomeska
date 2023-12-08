@@ -30,7 +30,6 @@ int main() {
         int flag;
         cout << "Your lives - " << lives << endl;
         cout << "You can use - " << help << "  help" << endl;
-        cout << correct_word << " - ans" << endl;
         cout << "The words is - " << shuffle_word << endl;
         string ans;
         cin >> ans;
@@ -45,7 +44,7 @@ int main() {
                 cout << "Next!" << endl;
                 i++;
                 flag = 0;
-                if (i == numwords - 1) {
+                if (i == numwords) {
                     cout << "WIN" << endl;
 
                 }
